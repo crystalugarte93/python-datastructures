@@ -1,0 +1,50 @@
+________________STACK____________________
+
+Stack - ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end
+
+Top - The end where items of the stack are added or removed
+
+Base - The opposite end of the stack - having items that have been around for the longest
+
+LIFO - Last in first out
+
+Push - adding an item to the top of a stack
+
+Pop - removing an item from the top of the stack
+
+Stacks can be used to reverse the order of items
+The order of insertion is the reverse of the order of removal
+
+Reversal property on a computer can be seen in the back button for example, where each stack item is the URL of the web page
+
+----- Implementation of a stack ------
+
+Stack attributes: 
+Stack() - creates an empty stack
+push(item) - adds a new item to the top of a stack
+pop() - returns the top item from the stack but does not remove it
+isEmpty() - tests to see whether the stack is empty - returns boolean value
+size() - returns the # of items
+
+Stack is a data type in Python : it is structured and ordered. LIFO
+
+We will create a stack like this by creating a class. 
+
+______________________QUEUE______________________
+The most recent added item in  the queue must wait at the end of the collection
+the item that has  been in the collection the longest is at the front
+
+FIFO: First in first served
+
+Enqueue --> BACK ::::: FRONT --> Dequeue
+Enqueue - when we add a new item to the rear of the queue
+Dequeue - removing the front item from the queue
+
+______________________DEQUE______________________
+Double ended queue, is an ordered collection of items similar to the queue
+Two ends: front and rear and items remain positioned in the collection
+
+Characteristic for the Deque is the unrestrictive nature of adding and removing items
+removed/added either in the front or in the rear of the deque
+
+In a sense this hybrid linear structure provids all the capabilities of a stack an a queue in a single data structure
