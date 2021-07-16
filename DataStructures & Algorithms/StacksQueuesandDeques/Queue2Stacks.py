@@ -26,13 +26,6 @@ class Queue2Stacks(object):
         #        self.outstack.insert(i,self.instack.pop(-1))
         #else:
 
-
-
-
-
-
-
-
 def main():
     q  = Queue2Stacks() # Two stacks in one queue data type
     print(q.stack1)
