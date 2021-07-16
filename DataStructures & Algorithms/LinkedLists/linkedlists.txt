@@ -1,0 +1,73 @@
+________LINKED LISTS_________
+
+----- Singly Linked lists----
+singly linked lists - collection of nodes that form a linear sequence
+
+each node stores a reference to an object that is an element of the sequence, as well as a reference to the next node of the list
+
+Each node has two informations:  1, element, 2,the reference to the next node
+
+Essentially a linked list is a bunch of nodes linked by pointers. 
+
+Linked lists instance maintains a member called:
+Head -  that identifies the first node of the list
+Tail -  that identifies the last node of the list
+
+We can identify the node None as its next reference
+
+This proceess is commonly known as traversing the linked list
+
+Does not a have predetermined fixed size
+Uses space proprtionally to its current nummber of elements
+
+To insert new elements at the head of the list: 
+- we create a new node
+- set its element to the new element
+- set its next link to refer to the current head
+- then set the list's head to point to the new node
+
+To insert an element at the tail of the list: 
+- Create a new node
+- assign its next reference to None
+- Set the next reference of the tail to point to this new node
+- then update the tail reference itself to the new node
+
+
+Removing element from the head of a singly linked list: 
+We cannot easily remove the last node of a singly linked list. 
+Even if we maintain a tail reference directly to the last node of the list, we must be able to access the node before the last node in order to remove the last node. 
+But we cannot reach the node before the tail by following the next links from the tail
+If we want to support such an operation efficiently, we will need to make our list doubly linked
+
+We will create a node class and create a singly linked list
+
+Pros:
+- Linked Lists have constant-time insertions and deletions in any positions,
+in comparison, arrays require O(n) time to do the same thing
+- Linked lists can continue to expand without having to specify their size ahead of time
+
+Cons:
+- To access  an element in a linked list, you need to take O(k) time to go from head the  list to the kth element.
+In contrast, arrays have constant time operations to access elements in an array
+
+----- Doubly Linked lists----
+Each node in a doubly linked list keeps an explicit reference
+to the node before it and a reference to the node after it
+
+This allows greater  variety of O(1)-time update operations, including insertions and deletions
+prev - previous node
+next - preceding node
+
+Dummy  nodes: header node (beginning of the list), trailer node (end of the list)
+
+All new elements are thus added between two existing nodes
+
+Inserting and Deleting with Doubly Linked Lists:
+Relinking is done after the creating of a new node
+Before deleting a node, you first relink the adjacent nodes to eachother, then delete the node
+
+
+
+
+
+
