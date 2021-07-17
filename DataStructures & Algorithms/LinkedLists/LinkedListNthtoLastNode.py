@@ -16,8 +16,17 @@ def linked_list_nth_to_last2(head,n):
     # - keeping a distance of n between them
     # 4) Once the right_point has hit the tail, we know that the left point is at the target
 
+    left_pointer = head
+    right_pointer = head
+    for i in range(n-1): # Width  of the bar
+        if not right_pointer.nextnode:
+            raise LookupError('Error: n is larger than the linked list')
+        right_pointer = right_pointer.nextnode
 
-
+    while right_pointer.nextnode:
+        left_pointer = left_pointer.nextnode
+        right_pointer = right_pointer.nextnode
+    return left_pointer
 
 def linked_list_nth_to_last(head,n):
     # Write a function that takes a head node and
@@ -48,7 +57,7 @@ def main():
     b.nextnode = c
     c.nextnode = d
     d.nextnode = e
-    array, target_node = linked_list_nth_to_last(a,4)
+    array, target_node = linked_list_nth_to_last(a,2) # Understood target node as the N'th node element
 
     for node in array:
         print(node.value)
@@ -56,8 +65,9 @@ def main():
 
     print('---------Start of the suggested solution---------')
 
-    target_node = linked_list_nth_to_last2(a, 4)
-    print(target_node.value)
+    target_node = linked_list_nth_to_last2(a, 2)
+    print(f'Target node has value: {target_node.value}') # Seems N = meant to  be the width of the bar,
+    # and thus := the left_point value of that bar
 
 
 if __name__ == "__main__":
